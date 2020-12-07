@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:dartz/dartz.dart';
+import 'package:weatherapp/Core/error/exceptions.dart';
 import 'package:weatherapp/Core/error/failures.dart';
 import 'package:weatherapp/Core/network/network_info.dart';
 import 'package:weatherapp/features/weather/data/datasources/weather_local_data_source.dart';
@@ -108,7 +109,7 @@ void main() {
           //Arrange
           when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
           when(mockWeatherRemoteDataSource.getConcreteWeather(any))
-              .thenThrow(ServerFailure());
+              .thenThrow(ServerException());
           // Act
           final result = await repository.getConcreteWeather(tCountry);
           // Assert
@@ -151,7 +152,7 @@ void main() {
           //Arrange
           when(mockNetworkInfo.isConnected).thenAnswer((_) async => false);
           when(mockWeatherLocalDataSource.getLastCachedWeather())
-              .thenThrow(CacheFailure());
+              .thenThrow(CacheException());
           // Act
           final result = await repository.getConcreteWeather(tCountry);
           // Assert

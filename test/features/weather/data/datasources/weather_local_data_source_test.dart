@@ -5,7 +5,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:weatherapp/Core/error/exceptions.dart';
 import 'package:weatherapp/features/weather/data/datasources/weather_local_data_source.dart';
-import 'package:weatherapp/features/weather/data/datasources/weather_remote_data_source.dart';
 import 'package:weatherapp/features/weather/data/models/current_model.dart';
 import 'package:weatherapp/features/weather/data/models/location_model.dart';
 import 'package:weatherapp/features/weather/data/models/weather_model.dart';

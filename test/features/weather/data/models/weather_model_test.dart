@@ -4,8 +4,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:weatherapp/features/weather/data/models/current_model.dart';
 import 'package:weatherapp/features/weather/data/models/location_model.dart';
 import 'package:weatherapp/features/weather/data/models/weather_model.dart';
-import 'package:weatherapp/features/weather/domain/entities/current.dart';
-import 'package:weatherapp/features/weather/domain/entities/location.dart';
 import 'package:weatherapp/features/weather/domain/entities/weather.dart';
 
 import '../../../../fixtures/fixture_reader.dart';

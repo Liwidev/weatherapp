@@ -1,7 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:dartz/dartz.dart';
 import 'package:mockito/mockito.dart';
-import 'package:weatherapp/features/weather/data/models/weather_model.dart';
 import 'package:weatherapp/features/weather/domain/entities/current.dart';
 import 'package:weatherapp/features/weather/domain/entities/location.dart';
 import 'package:weatherapp/features/weather/domain/entities/weather.dart';

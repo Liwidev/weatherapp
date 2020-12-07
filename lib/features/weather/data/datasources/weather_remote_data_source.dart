@@ -5,7 +5,7 @@ import 'package:weatherapp/features/weather/data/models/weather_model.dart';
 import 'package:meta/meta.dart';
 import 'package:http/http.dart' as http;
 
-const APIKEY = "6ae91693fb5546cbb7701921200212";
+const APIKEY = "INSERT YOUR APIKEY HERE";
 
 abstract class WeatherRemoteDataSource {
   Future<WeatherModel> getConcreteWeather(String country);

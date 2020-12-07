@@ -7,16 +7,6 @@ import 'package:weatherapp/features/weather/domain/entities/current.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
-  final tCurrent = Current(
-    tempc: 6.0,
-    tempf: 42.8,
-    windmph: 5.6,
-    windkph: 9.0,
-    pressuremb: 1025.0,
-    pressurein: 30.8,
-    humidity: 75,
-    uv: 1.0,
-  );
   final tCurrentModel = CurrentModel(
     tempc: 6.0,
     tempf: 42.8,

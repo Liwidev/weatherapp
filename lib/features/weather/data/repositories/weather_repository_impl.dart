@@ -1,3 +1,4 @@
+import 'package:weatherapp/Core/error/exceptions.dart';
 import 'package:weatherapp/Core/network/network_info.dart';
 import 'package:weatherapp/features/weather/data/datasources/weather_local_data_source.dart';
 import 'package:weatherapp/features/weather/data/datasources/weather_remote_data_source.dart';
@@ -26,14 +27,14 @@ class WeatherRepositoryImpl implements WeatherRepository {
             await remoteDataSource.getConcreteWeather(country);
         localDataSource.cacheWeather(weatherRemote);
         return Right(weatherRemote);
-      } on ServerFailure {
+      } on ServerException {
         return Left(ServerFailure());
       }
     } else {
       try {
         final weatherCache = await localDataSource.getLastCachedWeather();
         return Right(weatherCache);
-      } on CacheFailure {
+      } on CacheException {
         return Left(CacheFailure());
       }
     }
